@@ -29,3 +29,11 @@
 (expect 1001(calculate "1,1000"))
 (expect 1(calculate "1,1001"))
 
+;; multi-character delimiters should result in addition
+(expect 6(calculate "//[***]\n1***2***3"))
+
+;; multiple delimiters should result in addition
+(expect 6(calculate "//[*][%]\n1*2%3"))
+
+;; multiple multi-character delimiters should result in addition
+(expect 6(calculate "//[**][%%%]\n1**2%%%3"))
