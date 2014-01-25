@@ -1,11 +1,14 @@
 (ns string-calculator.core)
+()
 
 (defn extract-numbers [the-string]
-  (clojure.core/re-seq #"\d" the-string))
+  (map clojure.core/read-string (re-seq #"[\d]+|[-\d]+" the-string )))
 
-(defn add [the-string]
-  (reduce + (map read-string (extract-numbers the-string))))
+(defn validate [numbers]
+  (if (empty?(filter neg? numbers)) numbers (throw (Exception. "Negative numbers not allowed"))))
+
+(defn add [numbers]
+  (reduce + numbers))
 
 (defn calculate [the-string]
-  (if (empty? the-string) 0 (add the-string)))
-
+  (if (empty? the-string)0 (add(validate(extract-numbers the-string)))))

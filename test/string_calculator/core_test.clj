@@ -17,6 +17,7 @@
 
 ;; two newline seperated string numerics should result in addition
 (expect 3(calculate "1\n2"))
+(expect 3(calculate "1\n2\n"))
 
 ;; custome delimiter should result in addition
 (expect 3(calculate "//;\n1;2"))
