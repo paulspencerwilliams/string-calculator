@@ -6,7 +6,7 @@ We wrote it using basic [Clojure](http://clojure.org), edited with [Lighttable](
 
 During the 1 1/2 hour session at Agile Staffs, we struggled with some basic syntax and Lighttable REPL evaluation not picking up clojure.core functions. We did however, manage to get to started to validate against negative numbers. 
 
-Today (the following Sunday), I spent another 40 minutes completing validation, filtering numbers under 1000 and extra testing scenarios. 
+Today (the following Saturday), I spent another 40 minutes completing validation, filtering numbers under 1000 and extra testing scenarios. 
 
 ## Usage
 
