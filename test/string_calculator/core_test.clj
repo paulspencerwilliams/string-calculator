@@ -24,3 +24,8 @@
 
 ;; negative numbers should result in exception
 (expect Exception (calculate "-1,2"))
+
+;; numbers greater than 1000 should be ignored
+(expect 1001(calculate "1,1000"))
+(expect 1(calculate "1,1001"))
+
