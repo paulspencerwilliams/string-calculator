@@ -2,7 +2,6 @@
   (:require [string-calculator.core :refer :all])
   (:use expectations))
 
-
 ;; empty string should result in 0
 (expect 0 (calculate ""))
 
