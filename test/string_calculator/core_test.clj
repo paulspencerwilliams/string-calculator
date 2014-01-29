@@ -23,6 +23,8 @@
 
 ;; negative numbers should result in exception
 (expect Exception (calculate "-1,2"))
+(expect Exception (calculate "-100, 2"))
+(expect Exception (calculate "300, -234324"))
 
 ;; numbers greater than 1000 should be ignored
 (expect 1001(calculate "1,1000"))
@@ -36,3 +38,4 @@
 
 ;; multiple multi-character delimiters should result in addition
 (expect 6(calculate "//[**][%%%]\n1**2%%%3"))
+
